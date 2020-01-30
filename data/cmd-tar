@@ -1,0 +1,5 @@
+tar czvf total_word_feature_extractor_zh.tar.gz total_word_feature_extractor_zh.dat
+split -b 50M -d -a 1 total_word_feature_extractor_zh.tar.gz total_word_feature_extractor_zh.tar.gz
+
+cat total_word_feature_extractor_zh.tar.gz.* | tar -zxv
+

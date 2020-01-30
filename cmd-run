@@ -1,0 +1,10 @@
+rasa train
+rasa shell nlu
+
+cd WeatherBot_Action
+SENIVERSE_KEY=SQ4A-IKuv4GK7eu17 ./start_sdk_server.bash
+
+rasa shell
+
+rasa run -m models --enable-api
+
