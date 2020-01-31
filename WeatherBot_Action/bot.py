@@ -48,7 +48,7 @@ class ActionReportWeather(FormAction):
         date_time_number = text_date_to_number_date(date_time)
 
         if isinstance(date_time_number, str):  # parse date_time failed
-            return [SlotSet("matches", "暂不支持查询 {} 的天气".format([address, date_time_number]))]
+            return [SlotSet("matches", "暂不支持查询 {} 的天气".format(date_time))]
         else:
             weather_data = get_text_weather_date(address, date_time, date_time_number)
             return [SlotSet("matches", "{}".format(weather_data))]
